@@ -1,7 +1,7 @@
 baseURL = "https://iberoamerica-jena.de/"
 languageCode = "de-de"
 title = "Iberoamérica e.V."
-theme = "ananke"
+theme = "ibero"
 
 DefaultContentLanguage = "de"
 [languages]
