@@ -1,5 +1,10 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+baseURL = "https://iberoamerica-jena.de/"
+languageCode = "de-de"
+title = "Iberoamérica e.V."
 theme = "ananke"
 
+DefaultContentLanguage = "de"
+[languages]
+    [languages.de]
+    [languages.es]
+    [languages.pt]
