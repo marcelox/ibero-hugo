@@ -1,7 +1,12 @@
-body {
-  font-size: 3rem;
-  background: #eedeb5;
-  h1 {
-    color: white;
-  }
+@import "ground";
+@import "header";
+@import "footer";
+
+.logo {
+  display: flex;
+  max-width: 20rem;
+}
+
+.language-menu {
+  display: flex;
 }
