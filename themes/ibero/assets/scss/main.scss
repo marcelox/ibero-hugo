@@ -1,10 +1,58 @@
+$global-font-size: 16px;
+
+@import "foundation";
+@import "color";
+
+$breakpoints: (
+        small: 0,
+        medium: 640px,
+        large: 768px,
+        xlarge: 1088px,
+        xxlarge: 1520px,
+        xxxlarge: 1920px,
+        xxxxlarge: 2208px,
+);
+
 @import "ground";
 @import "header";
 @import "footer";
 
+body {
+  transition: background 500ms;
+  background: #3b5998;
+  @include breakpoint(medium) {
+    background: #9eebcf;
+  }
+  @include breakpoint(large) {
+    background: green;
+  }
+  @include breakpoint(xlarge) {
+    background: olive;
+  }
+  @include breakpoint(xxlarge) {
+    background: pink;
+  }
+  @include breakpoint(xxxlarge) {
+    background: white;
+  }
+  @include breakpoint(xxxxlarge) {
+    background: black;
+  }
+}
+
+h1 {
+  color: white;
+  @include breakpoint(xlarge down) {
+    color: yellow
+  }
+}
+
 .logo {
   display: flex;
   max-width: 20rem;
+  @include breakpoint(xlarge) {
+    max-width: 10rem;
+  }
 }
 
 .language-menu {
