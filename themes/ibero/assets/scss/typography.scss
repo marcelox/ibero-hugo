@@ -1,0 +1,17 @@
+html {
+  --h1: 2.5rem;
+  @include breakpoint(large) {
+    --h1: 5.08333vw;
+  }
+  --h2: 3.83333vw;
+  --h3: 3.33333vw;
+  --h4: 2.5vw;
+  --h5: 1rem;
+  --h6: 1rem;
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-size: var(--h#{$i});
+  }
+}
