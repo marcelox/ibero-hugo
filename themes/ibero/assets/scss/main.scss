@@ -48,14 +48,3 @@ h1 {
   }
 }
 
-.logo {
-  display: flex;
-  max-width: 20rem;
-  @include breakpoint(xlarge) {
-    max-width: 10rem;
-  }
-}
-
-.language-menu {
-  display: flex;
-}
