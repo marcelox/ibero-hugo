@@ -47,4 +47,11 @@ header {
 
 .language-menu {
   display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+  a {
+    color: white;
+	text-decoration: none;
+    font-size: 1.75rem;
+  }
 }
