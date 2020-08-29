@@ -11,6 +11,8 @@
     {{ else }}
     <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
     {{ end }}
+    <meta name="description"
+          content="{{ .Site.Params.description }}">
 
     {{ $style := resources.Get "scss/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
@@ -22,12 +24,12 @@
     {{ end }}
     {{ end }}
 
-    {{/* NOTE: These Hugo Internal Templates can be found starting at https://github.com/spf13/hugo/blob/master/tpl/tplimpl/template_embedded.go#L158 */}}
+    {{/* NOTE: These Hugo Internal Templates can be found starting at https://github.com/spf13/hugo/blob/master/tpl/tplimpl/template_embedded.go#L158
     {{- template "_internal/opengraph.html" . -}}
     {{- template "_internal/schema.html" . -}}
     {{- template "_internal/twitter_cards.html" . -}}
 
     {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
     {{ template "_internal/google_analytics_async.html" . }}
-    {{ end }}
+    {{ end }} */}}
 </head>
