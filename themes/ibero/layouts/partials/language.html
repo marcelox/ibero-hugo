@@ -1,0 +1,7 @@
+{{ if .IsTranslated }}
+    {{ range $.AllTranslations }}
+    <ul>
+        <li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+    </ul>
+    {{ end }}
+{{ end }}

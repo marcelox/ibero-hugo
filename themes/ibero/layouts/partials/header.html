@@ -4,13 +4,9 @@
     </a>
 
     <nav id="menu">
-        {{ if .IsTranslated }}
         <div class="language-menu">
-            {{ range $.AllTranslations }}
-            <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
-            {{ end}}
+            {{- partial "language.html" . -}}
         </div>
-        {{ end }}
 
     </nav>
     <a class="menu" href="#menu"></a>
