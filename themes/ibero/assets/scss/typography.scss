@@ -1,4 +1,5 @@
 html {
+  font-size: 16px;
   --h1: 2.5rem;
   @include breakpoint(large) {
     --h1: 5.08333vw;
@@ -8,6 +9,11 @@ html {
   --h4: 2.5vw;
   --h5: 1rem;
   --h6: 1rem;
+}
+
+body {
+  font-size: 1.125rem;
+  line-height: 1.5;
 }
 
 @for $i from 1 through 6 {
