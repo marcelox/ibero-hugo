@@ -7,5 +7,17 @@ body {
   height: 100%;
   grid-template-rows: auto 1fr auto;
   margin: 0;
-  background: #eedeb5;
+}
+
+main {
+  padding: 0 1.75rem;
+  @include breakpoint(medium) {
+    padding: 0 2rem;
+  }
+  @include breakpoint(large) {
+    padding: 0 3rem;
+  }
+  @include breakpoint(xlarge) {
+    padding: 0.5rem calc((100vw - 960px - 0.5rem) / 2);
+  }
 }

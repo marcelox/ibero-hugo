@@ -1,9 +1,9 @@
 header {
-  background: #fffceb;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0;
+  border-bottom: 2px solid var(--light-blue);
   .menu {
     @include hamburger();
     border-radius: 50%;
@@ -19,8 +19,19 @@ header {
     position: absolute;
     z-index: 2;
     background: var(--light-blue);
+    background: var(--dark-blue);
     top: 0;
     left: 0;
+    @include breakpoint(xxxlarge) {
+      position: fixed;
+      transform: translateX(0);
+      transition: transform 400ms, right 400ms;
+      width: 20%;
+	  overflow: visible;
+      left: auto;
+	  padding: 1rem;
+      right: 0;
+    }
   }
   nav:target {
     //overflow: auto;
@@ -46,12 +57,53 @@ header {
 }
 
 .language-menu {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 1rem;
+  background-color: var(--light-blue);
+  ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+	li {
+	  flex: 0 0 33.3333333%;
+	  padding: 0;
+      text-align: center;
+      margin: 0;
+      font-size: 80%;
+	  @include breakpoint(large) {
+        font-size: 1rem;
+	  }
+	  a {
+        border-right: 1px solid var(--dark-blue);
+        padding: 2rem;
+        display: block;
+        transition: background-color 400ms;
+        text-decoration: none;
+        &:hover {
+          background-color: var(--dark-blue);
+        }
+      }
+    }
+  }
   a {
     color: white;
-	text-decoration: none;
-    font-size: 1.75rem;
+	//text-decoration: none;
+    @include breakpoint(xlarge) {
+      font-size: 1rem;
+    }
+  }
+}
+
+.main-menu {
+  list-style: none;
+  margin-left: 0;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  li.active {
+    a {
+      border-bottom: 3px solid whitesmoke;
+    }
   }
 }

@@ -18,33 +18,3 @@ $breakpoints: (
 @import "header";
 @import "footer";
 
-body {
-  transition: background 500ms;
-  background: #3b5998;
-  @include breakpoint(medium) {
-    background: #9eebcf;
-  }
-  @include breakpoint(large) {
-    background: green;
-  }
-  @include breakpoint(xlarge) {
-    background: olive;
-  }
-  @include breakpoint(xxlarge) {
-    background: pink;
-  }
-  @include breakpoint(xxxlarge) {
-    background: white;
-  }
-  @include breakpoint(xxxxlarge) {
-    background: black;
-  }
-}
-
-h1 {
-  color: white;
-  @include breakpoint(xlarge down) {
-    color: yellow
-  }
-}
-

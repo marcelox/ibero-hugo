@@ -14,6 +14,7 @@
     <meta name="description"
           content="{{ .Site.Params.description }}">
 
+    <link rel="stylesheet" href="https://use.typekit.net/fhi4goq.css">
     {{ $style := resources.Get "scss/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
 
