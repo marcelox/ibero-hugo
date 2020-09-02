@@ -21,3 +21,7 @@ main {
     padding: 0.5rem calc((100vw - 960px - 0.5rem) / 2);
   }
 }
+
+img {
+  max-width: 100%;
+}
