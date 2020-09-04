@@ -1,12 +1,37 @@
 html {
   --dark: #383E42;
-  height: 100%;
+  height: 100%; // Take the footer to the bottom
 }
 body {
+  // Site structure
   display: grid;
-  height: 100%;
-  grid-template-rows: auto 1fr auto;
+  height: 100%; // Take the footer to the bottom
+  grid-template-rows: auto auto 1fr auto; // rows: header, nav, main, footer
   margin: 0;
+
+
+  @include breakpoint(xxxlarge) {
+    grid-template-rows: auto 1fr auto; // rows: header, nav, main, footer
+      grid-template-columns: 1fr 20%; // we make space for the navigation on the right, will be always open from xxxlarge breakpoint on
+    header {
+	  grid-column: 1/3;
+	  grid-row: 1/2;
+    }
+    nav {
+	  height: auto;
+      grid-column: 2/3;
+	  grid-row: 2/3; // begins with the main
+    }
+    main {
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+    footer {
+      grid-column: 1/3;
+      grid-row: 3/4;
+    }
+  }
+
 }
 
 main {

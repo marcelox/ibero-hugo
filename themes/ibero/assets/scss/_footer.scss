@@ -2,8 +2,12 @@ footer {
   //background-color: var(--dark);
   background-color: var(--dark-blue);
   color: whitesmoke;
-  padding: 2rem;// set a variable mytodo
+  padding: .5rem 1rem;// set a variable mytodo
   ul {
+    display: flex;
+    padding: 0;
+    list-style: none;
+    justify-content: flex-start;
     li a {
       color: white;
     }

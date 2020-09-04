@@ -1,0 +1,107 @@
+nav {
+  overflow: hidden;
+  z-index: 2;
+  background: var(--light-blue);
+  background: var(--dark-blue);
+
+  @include breakpoint(xxxlarge) {
+	background: #c6d4d7;
+	border-left: 2px solid var(--dark-blue);
+  }
+}
+
+nav:target {
+  transform: translateX(0);
+  background: var(--dark-blue);
+  transition: transform 400ms;
+
+  + & #menu {
+	z-index: 2;
+  }
+
+}
+.language-menu {
+  background-color: var(--light-blue);
+
+  ul {
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	li {
+	  flex: 1 0 0;
+	  padding: 0;
+	  text-align: center;
+	  margin: 0;
+	  font-size: 80%;
+	  border-right: 1px solid var(--dark-blue);
+
+	  @include breakpoint(xlarge) {
+		font-size: 1rem;
+	  }
+
+	  a {
+		padding: 2rem;
+
+		@include breakpoint(xxxlarge) {
+		  padding: 1rem;
+		}
+
+		display: block;
+		transition: background-color 400ms;
+		text-decoration: none;
+
+		&:hover {
+		  background-color: var(--dark-blue);
+		}
+
+	  }
+	}
+  }
+
+  a {
+	color: white;
+	//text-decoration: none;
+
+	@include breakpoint(xlarge) {
+	  font-size: 1rem;
+	}
+
+  }
+}
+.main-menu {
+  list-style: none;
+  margin-left: 0;
+
+  a {
+	color: white;
+	text-decoration: none;
+  }
+
+  li.active {
+
+	a {
+	  border-bottom: 3px solid whitesmoke;
+	}
+
+  }
+}
+
+nav {
+  height: 0;
+  transition: height 400ms;
+
+  .close-menu {
+	height: 4rem;
+	display: flex;
+  }
+  &:target {
+	transition: height 400ms;
+	height: 70vh;
+	position: fixed;
+	width: 100%;
+  }
+}
+

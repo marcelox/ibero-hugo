@@ -4,106 +4,35 @@ header {
   align-items: center;
   margin: 0;
   border-bottom: 2px solid var(--light-blue);
+
   .menu {
-    @include hamburger();
-    border-radius: 50%;
+    @include hamburger(var(--light-blue), var(--dark-blue), 35px, 30px, 6px, 3);
     padding-left: .5rem;
     padding-right: .5rem;
     margin-right: 1rem;
-  }
-  nav {
-    transform: translateX(-100vw);
-	overflow: hidden;
-    width: 90vw;
-    height: 100vh;
-    position: absolute;
-    z-index: 2;
-    background: var(--light-blue);
-    background: var(--dark-blue);
-    top: 0;
-    left: 0;
-    @include breakpoint(xxxlarge) {
-      position: fixed;
-      transform: translateX(0);
-      transition: transform 400ms, right 400ms;
-      width: 20%;
-	  overflow: visible;
-      left: auto;
-	  padding: 1rem;
-      right: 0;
+    display: flex;
+	span {
+      display: block;
     }
-  }
-  nav:target {
-    //overflow: auto;
-    transform: translateX(0);
-    background: var(--dark-blue);
-    transition: transform 400ms;
-    box-shadow: 2px 0px 29px 16px #000000de;
-    //z-index: 2;
-    + & #menu {
-      z-index: 2;
+
+    @include breakpoint(xxxlarge) {
+      display: none;
     }
 
   }
+
 }
+
 .logo {
   display: flex;
   width: 10rem;
   padding: 1rem;
   transition: width 400ms;
+
   @include breakpoint(large) {
     width: 20rem;
   }
+
 }
 
-.language-menu {
-  background-color: var(--light-blue);
-  ul {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-	li {
-	  flex: 0 0 33.3333333%;
-	  padding: 0;
-      text-align: center;
-      margin: 0;
-      font-size: 80%;
-	  @include breakpoint(large) {
-        font-size: 1rem;
-	  }
-	  a {
-        border-right: 1px solid var(--dark-blue);
-        padding: 2rem;
-        display: block;
-        transition: background-color 400ms;
-        text-decoration: none;
-        &:hover {
-          background-color: var(--dark-blue);
-        }
-      }
-    }
-  }
-  a {
-    color: white;
-	//text-decoration: none;
-    @include breakpoint(xlarge) {
-      font-size: 1rem;
-    }
-  }
-}
 
-.main-menu {
-  list-style: none;
-  margin-left: 0;
-  a {
-    color: white;
-    text-decoration: none;
-  }
-  li.active {
-    a {
-      border-bottom: 3px solid whitesmoke;
-    }
-  }
-}
