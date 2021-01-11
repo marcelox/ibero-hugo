@@ -1,0 +1,11 @@
+<article class="pages-list">
+    <section class="pages-list-info">
+        {{- .Content -}}
+    </section>
+    <section class="list">
+        {{ range .Paginator.Pages }}
+        <a href="{{ .Permalink }}">{{- .Title -}}</a>
+        {{ end }}
+    </section>
+    {{- template "_internal/pagination.html" . -}}
+</article>
